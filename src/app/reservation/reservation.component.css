@@ -1,6 +1,6 @@
 section {
     height: calc(100vh - 22px);
-    background-image: url("../../assets/images/restaurantes-en-puerto-escondido.jpg");
+    background-image: url("https://s1.eestatic.com/2022/11/21/malaga/vivir/turismo/720189001_228892439_1706x960.jpg");
     background-size: cover;
     padding: 20px 70px;
 }
@@ -12,14 +12,15 @@ form {
     border: 2px solid #fff;
     border-radius: 7px;
     padding: 20px;
-    width: 400px;
+    max-width: 400px; /* Limit maximum width for larger screens */
     background: #e6e4e4;
     opacity: 0.9;
-    margin-left: 32%;
+    margin: 5% auto; /* Center the form horizontally */
 }
 
 .form-control {
-    width: 360px;
+    width: 100%; /* Make form control full width */
+    max-width: 360px; /* Limit maximum width for larger screens */
 }
 
 .cta {
@@ -30,6 +31,7 @@ form {
     transition: all 0.2s ease;
     border: none;
     background: none;
+    display: inline-block; /* Ensures inline alignment with the form control */
 }
 
 .cta:before {
@@ -78,4 +80,20 @@ form {
 
 .cta:active {
     transform: scale(0.95);
+}
+
+/* Responsive styles for smaller screens */
+@media screen and (max-width: 768px) {
+    section {
+        padding: 20px;
+    }
+
+    form {
+        width: 90%; /* Adjust width for smaller screens */
+        margin: 5% auto;
+    }
+
+    .cta {
+        margin-top: 10px;
+    }
 }

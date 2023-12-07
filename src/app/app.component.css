@@ -146,6 +146,7 @@ header nav {
     top: 0;
     padding: 36px 36px 20px;
     z-index: 20;
+    background-color: rgba(129, 126, 107, 0.6);
 }
 
 header nav .toggle {
@@ -505,6 +506,88 @@ footer .newsletter i {
 }
 
 
+@media screen and (max-width: 768px) {
+    header nav {
+        padding: 20px;
+    }
 
+    header nav .toggle {
+        display: block;
+    }
+
+    header .navigation-bar {
+        display: none;
+        position: fixed;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: rgba(129, 126, 107, 0.6);
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header .navigation-bar.show {
+        display: flex;
+    }
+
+    header .navigation-bar a {
+        color: #fff;
+        font-size: 14px;
+        padding: 10px;
+        width: 100%;
+        text-align: center;
+    }
+
+    header .navigation-bar a:hover {
+        color: #a96700;
+    }
+
+    header .navigation-bar .underline {
+        left: 0;
+        bottom: 0;
+    }
+
+    header nav .toggle.active {
+        left: 0;
+    }
+
+    header nav .toggle.active .first,
+    header nav .toggle.active .last {
+        top: 12px;
+    }
+
+    header nav .toggle .hide {
+        visibility: visible;
+        transition: 0.3s;
+    }
+
+    header .navigation-bar.show {
+        width: 100%;
+    }
+
+    footer .social-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer .social-buttons .social-button {
+        margin: 10px 0;
+    }
+
+    footer .newsletter input {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .contact {
+        padding: 20px;
+    }
+
+    .contact>div,
+    .contact .form {
+        flex: 100%;
+        margin-left: 0;
+    }
+}
 
 

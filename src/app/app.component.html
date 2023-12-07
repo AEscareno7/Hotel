@@ -1,25 +1,24 @@
 <header>
     <nav>
-        <div class="logo">
-        </div>
-        <div class="toggle">
+        <div class="logo"></div>
+        <div class="toggle" (click)="toggleMenu()">
             <span class="first"></span>
             <span class="middle"></span>
             <span class="last"></span>
         </div>
 
-        <div class="navigation-bar">
+        <div class="navigation-bar" [class.show]="isMenuOpen">
             <ul>
                 <li class="active"><a routerLink="/home">Home<span class="underline"></span></a></li>
-                <li> <a routerLink="../about">Acerca<span class="underline"></span> </a>
-                </li>
-                <li><a routerLink="/menu">Menu<span class="underline"></span></a></li>
+                <li><a routerLink="../about">Acerca<span class="underline"></span> </a></li>
+                <li><a routerLink="/menu">Servicios<span class="underline"></span></a></li>
                 <li><a routerLink="/reservation">Reservar<span class="underline"></span></a></li>
                 <li><a routerLink="/listas">Lista<span class="underline"></span></a></li>
             </ul>
         </div>
     </nav>
 </header>
+
 <router-outlet></router-outlet>
 
 <footer>
