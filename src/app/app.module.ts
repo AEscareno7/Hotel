@@ -18,9 +18,12 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { ReservationComponent } from './reservation/reservation.component';
 import { ListasComponent } from './listas/listas.component';
 import { SearchService } from './search.service';
+import { DataComponent } from './data/data.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
+    
     AppComponent,
     HomeComponent,
     AboutComponent,
@@ -28,8 +31,10 @@ import { SearchService } from './search.service';
     DomseguroPipe,
     ReservationComponent,
     ListasComponent,
+    DataComponent,
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,

@@ -7,6 +7,7 @@ import { AboutComponent } from './about/about.component';
 import { MenuComponent } from './menu/menu.component';
 import { ReservationComponent } from './reservation/reservation.component';
 import { ListasComponent } from './listas/listas.component';
+import { DataComponent } from './data/data.component';
 
 
 const routes: Routes = [
@@ -15,6 +16,7 @@ const routes: Routes = [
   { path: 'menu', component: MenuComponent},
   { path: 'reservation', component: ReservationComponent},
   { path: 'listas', component: ListasComponent},
+  { path: 'clientes', component: DataComponent },
   { path: '**', redirectTo: '', pathMatch: 'full' },
 
 ];

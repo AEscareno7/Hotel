@@ -1,0 +1,60 @@
+<!-- data.component.html -->
+<div class=" marginTop ">
+    <h2>Listado de Clientes</h2>
+    <ul>
+      <li *ngFor="let cliente of clientes">
+        {{ cliente.nombre }} {{ cliente.apellido }}
+        <button (click)="actualizarCliente(cliente)">Editar</button>
+        <button (click)="eliminarCliente(cliente.identificacion)">Eliminar</button>
+      </li>
+    </ul>
+  </div>
+  
+  <div>
+    <h2>Agregar Cliente</h2>
+    <form (submit)="agregarCliente()">
+      <label>Nombre:</label>
+      <input type="text" [(ngModel)]="nuevoCliente.nombre" required>
+  
+      <label>Apellido:</label>
+      <input type="text" [(ngModel)]="nuevoCliente.apellido" required>
+  
+      <!-- Agrega más campos según tus necesidades -->
+  
+      <button type="submit">Agregar</button>
+    </form>
+  </div>
+  
+<!-- data.component.html -->
+
+<div *ngIf="clienteAEditar">
+  <h2>Editar Cliente</h2>
+  <form (submit)="actualizarCliente(clienteAEditar.identificacion)">
+    <label *ngIf="editarCampo('nombre')">Nombre:</label>
+    <input type="text" [(ngModel)]="clienteEDIT.nombre" required>
+
+    <label *ngIf="editarCampo('apellido')">Apellido:</label>
+    <input type="text" [(ngModel)]="clienteEDIT.apellido" required>
+
+    <!-- Campos adicionales activados al editar -->
+    <label *ngIf="editarCampo('direccion')">Dirección:</label>
+    <input *ngIf="editarCampo('direccion')" type="text" [(ngModel)]="clienteEDIT.direccion">
+
+    <label *ngIf="editarCampo('telefono')">Teléfono:</label>
+    <input *ngIf="editarCampo('telefono')" type="text" [(ngModel)]="clienteEDIT.telefono">
+
+    <!-- Nuevos campos -->
+    <label *ngIf="editarCampo('observaciones')">Observaciones:</label>
+    <input *ngIf="editarCampo('observaciones')" type="text" [(ngModel)]="clienteEDIT.observaciones">
+
+    <label *ngIf="editarCampo('pais')">País:</label>
+    <input *ngIf="editarCampo('pais')" type="text" [(ngModel)]="clienteEDIT.pais">
+
+    <!-- Agrega más campos según tus necesidades -->
+
+    <button type="submit">Guardar Cambios</button>
+  </form>
+</div>
+
+
+  
