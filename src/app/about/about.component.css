@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
 
+body {
+  margin: 0;
+  padding: 0;
+}
 
 header {
   max-width: 100%;
@@ -10,37 +14,35 @@ header {
   padding: 20px 70px;
 }
 
-
-.text-container{
+.text-container {
   display: grid;
   place-items: center;
   margin-top: 20%;
 }
 
-.title-header{
+.title-header {
   font-family: 'Dancing Script', cursive;
   font-size: 130px;
   color: #f6a700;
   text-shadow: 3px 3px 1px #7e4400;
 }
 
-.title-hdr{
+.title-hdr {
   font-family: "Source Code Pro", sans-serif;
-    color: #fff;
-    text-shadow: 3px 3px #000117;
-    font-size: 70px;
-    font-weight: bold;
-    letter-spacing: 9.4px;
-    margin: 0 0 15px;
-    margin-top: 1%;
+  color: #fff;
+  text-shadow: 3px 3px #000117;
+  font-size: 70px;
+  font-weight: bold;
+  letter-spacing: 9.4px;
+  margin: 0 0 15px;
+  margin-top: 1%;
 }
 
-h4{
+h4 {
   font-size: 40px;
   color: #fff;
   text-shadow: 3px 2px #000117;
 }
-
 
 h1 {
   font-family: 'Dancing Script', cursive;
@@ -124,11 +126,6 @@ p {
   text-shadow: 3px 3px 1px #7e4400;
 }
 
-
-
-
-/* <=======================> Cards Styles <=======================> */
-
 .team {
   max-width: 100%;
   padding: 60px;
@@ -154,8 +151,6 @@ p {
   color: #f6a700;
   text-shadow: 3px 3px 1px #7e4400;
 }
-
-
 
 .team-cards {
   max-width: 100%;
@@ -269,9 +264,6 @@ p {
   fill: rgb(14, 14, 14);
 }
 
-
-/* <=========================> Section 3 <=========================>*/
-
 .three {
   padding: 60px;
 }
@@ -294,9 +286,120 @@ p {
   text-shadow: 3px 3px 1px #7e4400;
 }
 
-
-
 .three-text {
   margin-left: 5%;
   margin-top: 2%;
+}
+
+/* Medios para tabletas */
+@media screen and (max-width: 1024px) {
+  header {
+    padding: 20px;
+  }
+
+  .one,
+  .two,
+  .team,
+  .three {
+    padding: 20px;
+  }
+
+  .content-one,
+  .content-two,
+  .content-team,
+  .three-content {
+    padding: 20px 0;
+  }
+
+  .one .content-one h1 {
+    font-size: 60px;
+  }
+
+  .title-header {
+    font-size: 60px;
+  }
+
+  .title-hdr {
+    font-size: 30px;
+    letter-spacing: 5px;
+  }
+
+  h4 {
+    font-size: 25px;
+  }
+
+  h1,
+  .one .content-one h1,
+  .text h2,
+  .team-text h2,
+  .three-text h2 {
+    font-size: 30px;
+  }
+
+  .one .image-container,
+  .team-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .one .image {
+    max-width: 100%;
+    margin-left: 0;
+  }
+}
+
+/* Medios para teléfonos móviles */
+@media screen and (max-width: 600px) {
+  header {
+    padding: 10px;
+  }
+
+  .one,
+  .two,
+  .team,
+  .three {
+    padding: 10px;
+  }
+
+  .content-one,
+  .content-two,
+  .content-team,
+  .three-content {
+    padding: 10px 0;
+  }
+
+  .one .content-one h1 {
+    font-size: 40px;
+  }
+
+  .title-header {
+    font-size: 40px;
+  }
+
+  .title-hdr {
+    font-size: 20px;
+    letter-spacing: 3.3px;
+  }
+
+  h4 {
+    font-size: 20px;
+  }
+
+  h1,
+  .text h2,
+  .team-text h2,
+  .three-text h2 {
+    font-size: 20px;
+  }
+
+  .one .image-container,
+  .team-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .one .image {
+    max-width: 100%;
+    margin-left: 0;
+  }
 }

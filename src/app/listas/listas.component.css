@@ -1,35 +1,36 @@
-.search-match {
-    background-color: yellow;
+/* Estilos generales */
+body {
+    margin: 0;
+    padding: 0;
 }
 
+/* Estilos para el fondo de la sección */
 .main-list {
-    height: calc(100vh - 0px);
+    height: 100vh;
     background-image: url("https://conocedores.com/wp-content/uploads/2023/02/hoteles-de-lujo-the-peninsula-istanbul-espacios-destinos-interiorismo-18022023.webp");
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    padding: 20px 70px;
+    padding: 20px;
 }
 
+/* Estilos para la tabla */
 table {
     margin-top: 5%;
     background-color: rgba(204, 229, 255, 0.8);
-    border-collapse: separate;
-    border-spacing: 25px 15px;
-    margin-left: 18%;
+    border-collapse: collapse;
+    width: 100%;
 }
 
-th {
+th, td {
+    padding: 15px;
     text-align: center;
-    color: #000117;
+    border: 1px solid #ddd;
 }
 
-td {
-    text-align: justify;
-}
-
-h2{
+/* Estilos para los encabezados y el input */
+h2 {
     text-align: center;
     margin-top: 3%;
     color: #f6a700;
@@ -43,19 +44,18 @@ h2{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 35px;
     margin-top: 7%;
 }
 
 .input {
-    max-width: 190px;
+    max-width: 100%;
     height: 100%;
     outline: none;
     font-size: 14px;
     font-weight: 500;
     background-color: #fff;
     caret-color: #f7f7f8;
-    color: #fff;
+    color: #000;
     padding: 7px 10px;
     border: 2px solid transparent;
     border-top-left-radius: 7px;
@@ -65,7 +65,7 @@ h2{
 }
 
 .input:hover {
-    border: 2px solid #fff;
+    border: 2px solid #7e4400;
 }
 
 .input:focus {
@@ -90,8 +90,37 @@ h2{
     background-color: rgba(54, 54, 56, 1);
 }
 
-h4{
+/* Estilos para texto adicional */
+h4 {
     font-size: 25px;
     color: #fff;
     text-shadow: 2px 2px 4px #000117;
+}
+
+/* Estilos responsivos */
+@media screen and (max-width: 768px) {
+    .main-list {
+        padding: 20px;
+    }
+
+    table {
+        margin-left: 0;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .input {
+        margin-right: 0;
+        margin-bottom: 10px;
+        border-radius: 7px;
+    }
+
+    .search__btn {
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 7px;
+        width: 100%;
+    }
 }

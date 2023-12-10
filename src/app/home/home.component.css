@@ -970,3 +970,73 @@ footer .newsletter i {
         padding: 60px 0 60px 20px;
     }
 }
+
+@media (max-width: 576px) {
+    h3,
+    h1 {
+        font-size: 30px; /* Ajusta según sea necesario */
+    }
+
+    h2 {
+        font-size: 60px; /* Ajusta según sea necesario */
+    }
+
+    header {
+        padding: 0;
+    }
+
+    header nav .logo {
+        padding-left: 0;
+    }
+
+    header nav .toggle.active {
+        left: 36%;
+    }
+
+    header .navigation-bar.show {
+        padding: 20px;
+        width: 80%; /* Ajusta según sea necesario */
+    }
+
+    .about-us,
+    .reservation {
+        padding: 30px 20px; /* Ajusta según sea necesario */
+    }
+
+    .menu {
+        padding: 30px 0 30px 20px; /* Ajusta según sea necesario */
+    }
+}
+
+@media (max-width: 768px) {
+    header nav .toggle.active {
+        left: 50%;
+    }
+
+    header .navigation-bar {
+        width: 100%;
+        padding: 20px;
+    }
+
+    header .navigation-bar ul {
+        padding-top: 20px;
+    }
+
+    header .navigation-bar ul li {
+        text-align: center;
+        padding: 14px 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .aboutus1 {
+        height: 250px; /* Ajusta según sea necesario */
+        width: 100%;
+    }
+
+    .image4 {
+        width: 100%;
+        height: auto;
+    }
+}
+0

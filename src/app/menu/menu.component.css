@@ -4,21 +4,26 @@
     box-sizing: border-box;
 }
 
-header{
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
     height: calc(100vh - 22px);
     background-size: cover;
     background: url("https://foodandtravel.mx/wp-content/uploads/2020/06/Reapertura-hoteles-por.jpg") fixed bottom;
-    padding: 20px 70px;
+    padding: 20px;
     background-repeat: no-repeat;
 }
 
-.header-text{
+.header-text {
     display: grid;
     place-items: center;
     margin-top: 20%;
 }
 
-h2{
+h2 {
     color: #f6a700;
     font-family: 'Dancing Script', cursive;
     text-shadow: 3px 3px 1px #7e4400;
@@ -38,8 +43,6 @@ h1 {
     margin-top: 5%;
 }
 
-
-
 .grid-container {
     display: grid;
     grid-gap: 25px;
@@ -52,47 +55,48 @@ h1 {
 }
 
 .columns-5 {
-    grid-template-columns: repeat(5, 1fr);
-}
-
-.columns-4 {
-    grid-template-columns: repeat(4, 1fr);
-}
-
-.columns-3 {
     grid-template-columns: repeat(3, 1fr);
 }
 
-.columns-2 {
+.columns-4 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.columns-3 {
     grid-template-columns: repeat(2, 1fr);
 }
 
+.columns-2,
 .columns-1 {
     grid-template-columns: 1fr;
 }
 
-.card{
+.card {
     background: rgb(235, 230, 230);
 }
 
-.card-img-top{
-    width: 286px;
-    height: 220px;
+.card-img-top {
+    width: 100%;
+    height: auto;
 }
 
-.card-title{
+.card-title {
     color: #f6a700;
 }
 
-.card-text{
+.card-text {
     color: green;
 }
 
-@media (max-width: 1200px) {
+.masonry {
+    column-count: 5;
+    column-gap: 20px;
+}
 
+@media (max-width: 1200px) {
     .columns-5,
     .columns-4 {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .columns-3 {
@@ -105,13 +109,9 @@ h1 {
     }
 }
 
-.masonry {
-    column-count: 5;
-    column-gap: 20px;
-}
-
 @media (max-width: 768px) {
-    .masonry {
+    .masonry,
+    .grid-container {
         column-count: 2;
     }
 }
